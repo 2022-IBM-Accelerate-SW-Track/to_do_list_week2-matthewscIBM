@@ -1,7 +1,8 @@
 import React from "react";
 import "../component/todos.css";
 import { Card, CardContent, Grid } from "@mui/material";
-
+import ListItemButton
+import ListItemText
 // 1. This component formats and returns the list of todos.
 // 2. Treat the question mark like an if statement.
 // If the todos array has items in the list [todos.length], we want to return the list
@@ -17,10 +18,13 @@ const Todos = ({ todos }) => {
           <Card>
             {/* Remember, we set the local state of this todo item when the user submits the form in 
             AddTodo.js. All we need to do is return the todo list item {todo.content} */}
-            <CardContent>
+               <ListItemButton component="a" href="#simple-list">
+     <ListItemText primary={todo.content}/> secondary 
+   </ListItemButton>
               <span style={{ padding: "50px" }}>{todo.content}</span>
             </CardContent>
-          </Card>
+          </Card> 
+<style={{margeinTop:10}}>
         </Grid>
       );
     })
